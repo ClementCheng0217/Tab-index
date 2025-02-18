@@ -1,4 +1,4 @@
-title: "TabFSBench"
+title: TabFSBench
 # author: GitHub User
 # email: your-email@domain.com
 
@@ -20,7 +20,7 @@ header_pages:
 footer_icons:
 - username: arXiv
   url: https://arxiv.org/abs/2501.18935
-  icon: arxiv-logomark-small@2x.png
+  icon: arxiv-logomark-small.png
 
 - username: Code
   url: https://github.com/LAMDASZ-ML/TabFSBench
