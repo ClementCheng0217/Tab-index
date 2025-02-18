@@ -8,23 +8,23 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
 
-minima_reboot:
-  date_format: "%b %-d, %Y"
-  date_format_short: "%b %-d"
+# minima_reboot:
+#   date_format: "%b %-d, %Y"
+#   date_format_short: "%b %-d"
 
 header_pages:
 - about.md
 - posts.md
 - github.md
 
-footer_icons:
-- username: arXiv
-  url: https://arxiv.org/abs/2501.18935
-  icon: arxiv-logomark-small.svg
+# footer_icons:
+# - username: arXiv
+#   url: https://arxiv.org/abs/2501.18935
+#   icon: arxiv-logomark-small.svg
 
-- username: Code
-  url: https://github.com/LAMDASZ-ML/TabFSBench
-  icon: icon-github.svg
+# - username: Code
+#   url: https://github.com/LAMDASZ-ML/TabFSBench
+#   icon: icon-github.svg
 
 paginate: 5
 
