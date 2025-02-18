@@ -6,9 +6,22 @@ layout: home
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Button Example</title>
 <style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* 设置页面背景颜色 */
+  }
+  
   .button-container {
     display: flex;
-    gap: 10px; /* Adjust the gap between buttons */
+    gap: 10px; /* 按钮之间的间隔 */
+    background-color: #e0e0e0; /* 按钮容器的背景颜色 */
+    padding: 20px; /* 按钮容器内边距 */
+    border-radius: 10px; /* 按钮容器的圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
   }
 
   .button {
@@ -37,22 +50,16 @@ layout: home
 </head>
 <body>
 
+<h1> TabFSBench: Tabular Benchmark for Feature Shifts in Open Environment </h1>
+
 <div class="button-container">
   <div class="button">
     <img src="arxiv-icon.png" alt="arXiv" width="20" height="20">
     arXiv
   </div>
   <div class="button">
-    <img src="pdf-icon.png" alt="PDF" width="20" height="20">
-    PDF
-  </div>
-  <div class="button">
     <img src="code-icon.png" alt="Code" width="20" height="20">
     Code
-  </div>
-  <div class="button">
-    <img src="vsi-bench-icon.png" alt="VSI-Bench" width="20" height="20">
-    VSI-Bench
   </div>
 </div>
 
