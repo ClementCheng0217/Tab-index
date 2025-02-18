@@ -1,6 +1,60 @@
 ---
 layout: home
 ---
-<p>
-  Posts
-<p>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Example</title>
+<style>
+  .button-container {
+    display: flex;
+    gap: 10px; /* Adjust the gap between buttons */
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Adjust the width of the button */
+    height: 40px; /* Adjust the height of the button */
+    background-color: #f9f1a5; /* Light yellow background */
+    border: 1px solid #e0c268; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+
+  .button:hover {
+    background-color: #f1e08a; /* Darker yellow on hover */
+  }
+
+  .button img {
+    margin-right: 8px; /* Space between icon and text */
+  }
+</style>
+</head>
+<body>
+
+<div class="button-container">
+  <div class="button">
+    <img src="arxiv-icon.png" alt="arXiv" width="20" height="20">
+    arXiv
+  </div>
+  <div class="button">
+    <img src="pdf-icon.png" alt="PDF" width="20" height="20">
+    PDF
+  </div>
+  <div class="button">
+    <img src="code-icon.png" alt="Code" width="20" height="20">
+    Code
+  </div>
+  <div class="button">
+    <img src="vsi-bench-icon.png" alt="VSI-Bench" width="20" height="20">
+    VSI-Bench
+  </div>
+</div>
+
+</body>
+
