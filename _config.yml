@@ -1,4 +1,4 @@
-# title: TabFSBench
+title: TabFSBench: Tabular Benchmark for Feature Shifts in Open Environment
 # author: GitHub User
 # email: your-email@domain.com
 
@@ -18,11 +18,11 @@ header_pages:
 - github.md
 
 footer_icons:
-- username: LAMDASZ-ML/TabFSBench
-  url: https://github.com/LAMDASZ-ML/TabFSBench
-  icon: icon-github.svg
+- username: arXiv
+  url: https://arxiv.org/abs/2501.18935
+  icon: arxiv-logomark-small.svg
 
-- username: LAMDASZ-ML/TabFSBench2
+- username: Code
   url: https://github.com/LAMDASZ-ML/TabFSBench
   icon: icon-github.svg
 
