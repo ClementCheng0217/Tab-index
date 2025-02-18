@@ -20,7 +20,7 @@ header_pages:
 footer_icons:
 - username: arXiv
   url: https://arxiv.org/abs/2501.18935
-  icon: arxiv-logomark-small.png
+  icon: arxiv-logomark-small.svg
 
 - username: Code
   url: https://github.com/LAMDASZ-ML/TabFSBench
