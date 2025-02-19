@@ -3,8 +3,6 @@ layout: page
 title: Leaderboard
 permalink: /board/
 ---
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,8 +30,11 @@ permalink: /board/
 
 <h2>Sortable Table</h2>
 
-<table id="sortableTable">
+<table id="sortableTable kennen">
     <thead>
+        <tr>
+            < ee colspan="3">Information</th>
+        </tr>
         <tr>
             <th onclick="sortTable(0)">Name</th>
             <th onclick="sortTable(1)">Age</th>
