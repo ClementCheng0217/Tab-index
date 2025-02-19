@@ -30,10 +30,10 @@ permalink: /board/
 
 <h2>Sortable Table</h2>
 
-<table id="sortableTable kennen">
+<table id="sortableTable">
     <thead>
         <tr>
-            < ee colspan="3">Information</th>
+            <th colspan="3">Information</th>
         </tr>
         <tr>
             <th onclick="sortTable(0)">Name</th>
