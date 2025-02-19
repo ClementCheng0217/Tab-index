@@ -1,19 +1,8 @@
 ---
 layout: page
-title: TabFSBench
+title: About
 permalink: /about/
 ---
-
-<div align="center">
-    <h1>
-        TabFSBench: Tabular Benchmark for Feature Shifts in Open Environment
-    </h1>
-</div>
-
-
-
-
-
 ---
 
 ## Introduction
