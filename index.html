@@ -6,6 +6,11 @@ layout: home
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Button Example</title>
 <style>
+
+  a.custom-link {
+        color: #000000; /* 默认灰色 */
+        text-decoration: none; /* 去掉下划线 */
+    }
   
   .button-container {
     display: flex;
@@ -18,7 +23,7 @@ layout: home
     justify-content: center;
     width: 100px; /* Adjust the width of the button */
     height: 40px; /* Adjust the height of the button */
-    background-color: #000000; /* Black background */
+    background-color: #f0f0f0; /* Black background */
     color: #ffffff; /* White text color */
     border: 1px solid #333333; /* Darker border color */
     border-radius: 10px; /* Rounded corners */
@@ -29,7 +34,7 @@ layout: home
 }
 
 .button:hover {
-    background-color: #333333; /* Slightly lighter black on hover */
+    background-color: #f0f0f0; /* Slightly lighter black on hover */
 }
 
   .button img {
@@ -72,15 +77,16 @@ layout: home
               <span class="author-block"><sup>3</sup> School of Artificial Intelligence, Nanjing University, China</span>
               <span class="eql-cntrb"><br><small><sup>‡</sup>Corresponding Author</small></span>
             </div>
-
+            <br>
             <div class="button-container" style="display: flex; justify-content: center;">
               <div class="button">
                 <img src="arxiv-logomark-small.png" alt="arXiv" width="20" height="20">
-                <a href="https://arxiv.org/abs/2501.18935" target="_blank">arXiv</a>
+                <a class="custom-link" href="https://arxiv.org/abs/2501.18935" target="_blank">arXiv</a>
               </div>
+              <span>   </span>
               <div class="button">
                 <img src="icon-github.svg" alt="Code" width="20" height="20">
-                <a href="https://github.com/LAMDASZ-ML/TabFSBench" target="_blank">Code</a>
+                <a class="custom-link" href="https://github.com/LAMDASZ-ML/TabFSBench" target="_blank">Code</a>
               </div>
             </div>
 
