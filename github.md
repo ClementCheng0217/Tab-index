@@ -3,61 +3,105 @@ layout: page
 title: Leaderboard
 permalink: /board/
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            cursor: pointer;
+            background-color: #f2f2f2;
+        }
+        th:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
 
-  <head>
-    <meta charset="utf-8">
-    <script type="text/javascript">
-      function sortTable(columnIndex) {
-  var table = document.getElementById("myTable");
-  var rows = Array.from(table.getElementsByTagName("tr"));
-  var ascending = true;
-  rows.shift(); // 移除表头行
-  rows.sort(function(a, b) {
-    var aCellValue = a.cells[columnIndex].textContent;
-    var bCellValue = b.cells[columnIndex].textContent;
-    if (columnIndex === 0 || columnIndex === 1) {
-      // 字符串排序
-      return ascending ? aCellValue.localeCompare(bCellValue) : bCellValue.localeCompare(aCellValue);
-    } else {
-      // 数字排序
-      return ascending ? Number(aCellValue) - Number(bCellValue) : Number(bCellValue) - Number(aCellValue);
-    }
-  });
-  ascending = !ascending; // 切换排序顺序
-  // 将排序后的行重新插入表格
-  rows.forEach(function(row) {
-    table.appendChild(row);
-  });
-}
-    </script>
-      </head>
-  <body>
+<h2>Sortable Table</h2>
 
-      <table id="myTable">
-  <thead>
-    <tr>
-      <th onclick="sortTable(0)">姓名</th>
-      <th onclick="sortTable(1)">年龄</th>
-      <th onclick="sortTable(2)">成绩</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>张三</td>
-      <td>25</td>
-      <td>90</td>
-    </tr>
-    <tr>
-      <td>李四</td>
-      <td>21</td>
-      <td>85</td>
-    </tr>
-    <tr>
-      <td>王五</td>
-      <td>23</td>
-      <td>95</td>
-    </tr>
-  </tbody>
+<table id="sortableTable">
+    <thead>
+        <tr>
+            <th onclick="sortTable(0)">Name</th>
+            <th onclick="sortTable(1)">Age</th>
+            <th onclick="sortTable(2)">City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John Doe</td>
+            <td>28</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Jane Smith</td>
+            <td>34</td>
+            <td>Los Angeles</td>
+        </tr>
+        <tr>
+            <td>Mike Johnson</td>
+            <td>45</td>
+            <td>Chicago</td>
+        </tr>
+        <tr>
+            <td>Anna Lee</td>
+            <td>29</td>
+            <td>Houston</td>
+        </tr>
+    </tbody>
 </table>
-  </body>
 
+<script>
+function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("sortableTable");
+    switching = true;
+    dir = "asc"; 
+    while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 1; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            if (dir == "asc") {
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            } else if (dir == "desc") {
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+        }
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            switchcount ++; 
+        } else {
+            if (switchcount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
+        }
+    }
+}
+</script>
+
+</body>
+</html>
