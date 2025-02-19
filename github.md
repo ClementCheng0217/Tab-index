@@ -4,6 +4,8 @@ title: Leaderboard
 permalink: /board/
 ---
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,16 +69,16 @@ permalink: /board/
             const rows = Array.from(tbody.querySelectorAll("tr"));
 
             // 判断当前排序方向
-            const isAscending = table.getAttribute("data-sort-direction") === "asc";
+            const isAscending = table.getAttribute(`data-sort-direction-${columnIndex}`) === "asc";
             const newDirection = isAscending ? "desc" : "asc";
-            table.setAttribute("data-sort-direction", newDirection);
+            table.setAttribute(`data-sort-direction-${columnIndex}`, newDirection);
 
             // 排序逻辑
             rows.sort((rowA, rowB) => {
                 const cellA = rowA.querySelectorAll("td")[columnIndex].textContent.trim();
                 const cellB = rowB.querySelectorAll("td")[columnIndex].textContent.trim();
 
-                if (!isNaN(cellA)) {
+                if (!isNaN(cellA) && !isNaN(cellB)) {
                     // 如果是数字，按数字排序
                     return isAscending ? cellA - cellB : cellB - cellA;
                 } else {
@@ -91,3 +93,4 @@ permalink: /board/
         }
     </script>
 </body>
+</html>
