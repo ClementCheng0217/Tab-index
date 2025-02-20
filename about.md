@@ -16,8 +16,37 @@ permalink: /about/
 - **Addable Components**: Supports to add new datasets and models, and export the given dataset under the specific experiment.
 
 ## Datasets
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            cursor: pointer;
+            background-color: #f2f2f2;
+        }
+        th:hover {
+            background-color: #ddd;
+        }
+        /* 新增合并单元格的样式 */
+        .group-header {
+            text-align: center;
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+
 <p>Datasets in TabFSBench. <strong>#Numerical</strong> means numerical features. <strong>#Categorical</strong> means categorical features.</p>
-<table border="1" style="border-collapse:collapse;">
+<table>
     <thead>
         <tr>
             <th>Tasks</th>
@@ -32,7 +61,7 @@ permalink: /about/
     <tbody>
         <tr>
             <td rowspan="4">Binary Classification</td>
-            <td>credit</td>
+            <td align="center">credit</td>
             <td>1,000</td>
             <td>7</td>
             <td>13</td>
@@ -174,13 +203,13 @@ We use LAMDA-TALENT to evaluate deep-learning models. You can get details from *
 ## Experimental Results
 
 #### 1. Most models have the limited applicability in feature-shift scenarios.
-<img src="https://s2.loli.net/2025/01/31/wvLWCdt3HrXMagG.png"  width="1000px">
+<img src="https://s2.loli.net/2025/01/31/wvLWCdt3HrXMagG.png"  width="800px">
 
 #### 2. Shifted features’ importance has a linear trend with model performance degradation.
-<img src="https://s2.loli.net/2025/01/31/7Hi8fX61DbTeq5L.png"  width="1000px">
+<img src="https://s2.loli.net/2025/01/31/7Hi8fX61DbTeq5L.png"  width="800px">
 
 We use $\Delta$ (described in equation~\ref{delta_equation}) to measure the model performance Gap $Delta$. Sum of shifted feature set's correlations refers to the sum of Pearson correlation coefficients of shifted features. Notably, model performance Gap $Delta$ and sum of shifted feature set's correlations demonstrate a strong correlation, with a Pearson correlation coefficient of $\rho$ = 0.7405.
 
 #### 3. Model closed-environment performance correlates with feature-shift performance.
-<img src="https://s2.loli.net/2025/01/31/SId5jgqNUvJxKzk.png"  width="1000px">
+<img src="https://s2.loli.net/2025/01/31/SId5jgqNUvJxKzk.png"  width="800px">
 Model closed-environment performance vs. model feature-shift performance. Closed-environment means that the dataset does not have any degree of feature shift. Feature-shift means average model performance in all degrees of feature shifts.
