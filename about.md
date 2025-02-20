@@ -17,7 +17,9 @@ permalink: /about/
 - **Exportable Datasets**: Be able to export the feature-shift version of the given dataset.
 - **Addable Components**: Supports to add new datasets and models, and export the given dataset under the specific experiment.
 
-<h2 style="color:#45479e"> Datasets </h2>
+## Datasets
+
+---
 
 <head>
     <meta charset="UTF-8">
@@ -165,6 +167,8 @@ permalink: /about/
 
 ## Models
 
+---
+
 TabFSBench is possible to test three kinds of models' performance directly, including tree-based models, deep learning models and tabular LLMs. For LLMs, TabFSBnech provides text files(.json) about the given dataset that can be used directly for LLM to finetune.
 
 #### Tree-based models
@@ -203,6 +207,8 @@ We use LAMDA-TALENT to evaluate deep-learning models. You can get details from *
 2. **[UniPredict](https://arxiv.org/abs/2310.03266)**: A framework that firstly trains on multiple datasets to acquire a rich repository of prior knowledge. UniPredict-Light model that TabFSBench used is available at [Google Drive](https://drive.google.com/file/d/1ABsv0C9HSJ9-M3kpkGRIFEw-4ebKdA3h/view?usp=sharing). After downloading the model, place it in `./model/tabularLLM/files/unified/models` and rename it to `light_state.pt`.
 
 ## Experimental Results
+
+---
 
 #### 1. Most models have the limited applicability in feature-shift scenarios.
 - Most models can’t handle feature shifts well.
