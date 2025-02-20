@@ -203,13 +203,22 @@ We use LAMDA-TALENT to evaluate deep-learning models. You can get details from *
 ## Experimental Results
 
 #### 1. Most models have the limited applicability in feature-shift scenarios.
+- Most models can’t handle feature shifts well.
+- No Model Consistently Outperforms.
+  
 <img src="https://s2.loli.net/2025/01/31/wvLWCdt3HrXMagG.png"  width="800px">
 
 #### 2. Shifted features’ importance has a linear trend with model performance degradation.
+
+- Single strong correlated feature shifted causes greater model performance degradation.
+- Shifted feature set’s correlations have a relationship with model performance degradation linearly.
+
+We use performance gap to measure the model performance Gap $Delta$. Sum of shifted feature set's correlations refers to the sum of Pearson correlation coefficients of shifted features. Notably, model performance Gap $Delta$ and sum of shifted feature set's correlations demonstrate a strong correlation, with a Pearson correlation coefficient of $\rho$ = 0.7405.
+
 <img src="https://s2.loli.net/2025/01/31/7Hi8fX61DbTeq5L.png"  width="800px">
 
-We use $\Delta$ (described in equation~\ref{delta_equation}) to measure the model performance Gap $Delta$. Sum of shifted feature set's correlations refers to the sum of Pearson correlation coefficients of shifted features. Notably, model performance Gap $Delta$ and sum of shifted feature set's correlations demonstrate a strong correlation, with a Pearson correlation coefficient of $\rho$ = 0.7405.
-
 #### 3. Model closed-environment performance correlates with feature-shift performance.
-<img src="https://s2.loli.net/2025/01/31/SId5jgqNUvJxKzk.png"  width="800px">
+
 Model closed-environment performance vs. model feature-shift performance. Closed-environment means that the dataset does not have any degree of feature shift. Feature-shift means average model performance in all degrees of feature shifts.
+
+<img src="https://s2.loli.net/2025/01/31/SId5jgqNUvJxKzk.png"  width="800px">
