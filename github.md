@@ -73,7 +73,7 @@ permalink: /board/
 </table>
 <br>
 
-<h2>Performance Gap</h2>
+<h2>Feature-Shift Performance Gap</h2>
 
 <table id="sortableTable">
     <thead>
@@ -133,7 +133,7 @@ permalink: /board/
 </table>
 <br>
 
-<h2>Performance Rank</h2>
+<h2>Feature-Shift Performance Rank</h2>
 
 <table id="sortableTable" style="text-align: center;">
     <thead>
