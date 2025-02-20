@@ -6,6 +6,8 @@ permalink: /posts/
 
 ## Quickstart
 
+---
+
 ### 1. Download
 
 Download this GitHub repository.
@@ -41,6 +43,8 @@ In **example.sh** you can get different kinds of instruction samples.
 
 ## How to Add New Datasets
 
+---
+
 Datasets used in TabFSBench are placed in the project's current directory, corresponding to the file name.
 
 Each dataset folder consists of:
@@ -59,6 +63,8 @@ Each dataset folder consists of:
   ```
 
 ## How to Add New Models
+
+---
 
 TabFSBench provides two methods to evaluate new model on feature-shift experiments.
 
