@@ -1,0 +1,135 @@
+---
+layout: home
+title: Home
+permalink: /
+---
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Example</title>
+<style>
+
+  a.custom-link {
+        color: #000000; /* 默认灰色 */
+        text-decoration: none; /* 去掉下划线 */
+    }
+  
+  .button-container {
+    display: flex;
+    gap: 10px; /* 按钮之间的间隔 */
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Adjust the width of the button */
+    height: 40px; /* Adjust the height of the button */
+    background-color: #f0f0f0; /* Black background */
+    color: #ffffff; /* White text color */
+    border: 1px solid #333333; /* Darker border color */
+    border-radius: 10px; /* Rounded corners */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #f0f0f0; /* Slightly lighter black on hover */
+}
+
+  .button img {
+    margin-right: 8px; /* Space between icon and text */
+  }
+
+  .code-box {
+            background-color: #f0f0f0; /* 灰色背景 */
+            padding: 15px; /* 内边距 */
+            border: 1px solid #ccc; /* 边框，可选 */
+            border-radius: 5px; /* 圆角，可选 */
+            font-family: monospace; /* 等宽字体 */
+            white-space: pre-wrap; /* 保留格式 */
+        }
+</style>
+</head>
+<body>
+
+<section class="hero" style="text-align: center;">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            
+            <h1 align="center"> TabFSBench </h1>
+            <h2 align="center"> Tabular Benchmark for Feature Shifts in Open Environment </h2>
+            
+            <div class="is-size-5 publication-authors" style="display: flex; justify-content: center;">
+              <!-- Paper authors -->
+              <span class="author-block"><a href="#" target="_blank">Zi-Jian Cheng</a><sup>1,2</sup>,</span>
+              <span class="author-block"><a href="#" target="_blank">Zi-Yi Jia</a><sup>1,2</sup>,</span>
+              <span class="author-block"><a href="https://zhouz.dev" target="_blank">Zhi Zhou</a><sup>2,3</sup>,</span>
+              <span class="author-block"><a href="https://www.lamda.nju.edu.cn/guolz" target="_blank">Lan-Zhe Guo</a><sup>1,2,‡</sup>,</span>
+              <span class="author-block"><a href="https://cs.nju.edu.cn/liyf/index.htm" target="_blank">Yu-Feng Li</a><sup>2,3,‡</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup> School of Intelligence Science and Technology, Nanjing University, China</span><br>
+              <span class="author-block"><sup>2</sup> National Key Laboratory for Novel Software Technology, Nanjing University, China</span><br>
+              <span class="author-block"><sup>3</sup> School of Artificial Intelligence, Nanjing University, China</span>
+              <span class="eql-cntrb"><br><small><sup>‡</sup>Corresponding Author</small></span>
+            </div>
+            <br>
+            <div class="button-container" style="display: flex; justify-content: center;">
+              <div class="button">
+                <img src="arxiv-logomark-small.png" alt="arXiv" width="20" height="20">
+                <a class="custom-link" href="https://arxiv.org/abs/2501.18935" target="_blank">arXiv</a>
+              </div>
+              <span>   </span>
+              <div class="button">
+                <img src="icon-github.svg" alt="Code" width="20" height="20">
+                <a class="custom-link" href="https://github.com/LAMDASZ-ML/TabFSBench" target="_blank">Code</a>
+              </div>
+            </div>
+<br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="Abstract">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Abstract</h2>
+    <div style="border:1px solid #CCC"></div>  
+    <p align="left">Tabular data is widely utilized in various machine learning tasks. Current tabular learning research predominantly focuses on closed environments, while in real-world applications, open environments are often encountered, where distribution and feature shifts occur, leading to significant degradation in model performance. Previous research has primarily concentrated on mitigating distribution shifts, whereas feature shifts, a distinctive and unexplored challenge of tabular data, have garnered limited attention. To this end, this paper conducts the first comprehensive study on feature shifts in tabular data and introduces the first <b>tab</b>ular <b>f</b>eature-<b>s</b>hift <b>bench</b>mark (TabFSBench). TabFSBench evaluates impacts of four distinct feature-shift scenarios on four tabular model categories across various datasets and assesses the performance of large language models (LLMs) and tabular LLMs in the tabular benchmark for the first time. Our study demonstrates three main observations: (1) most tabular models have the limited applicability in feature-shift scenarios; (2) the shifted feature set importance has a linear relationship with model performance degradation; (3) model performance in closed environments correlates with feature-shift performance. Future research direction is also explored for each observation.</p>
+  </div>
+</section>
+
+<section class="section" id="News">
+    <div class="container is-max-desktop content">
+      <h2 class="title">News</h2>
+      <div style="border:1px solid #CCC"></div>  
+      <ul>
+      <li>[2025-02] Our <a href="https://clementcheng0217.github.io/TabFSBench-index/" target="_blank">webpage</a> is released. </li>
+      <li>[2025-01] Our <a href="https://github.com/LAMDASZ-ML/TabFSBench" target="_blank">code</a> is available now. </li>
+      <li>[2025-01] Our <a href="https://arxiv.org/abs/2501.18935" target="_blank">paper</a> is accessible now. </li>
+      </ul>
+      <p>If you have any questions, feel free to contact us at chengzj@lamda.nju.edu.cn or submit an issue in the project <a href="https://github.com/LAMDASZ-ML/TabFSBench">issue</a>.</p>
+    </div>
+  </section>
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <div class="code-box">
+      <pre><code>@inproceedings{cheng2025tabfsbench,
+    author       = {Zi-Jian Cheng and Zi-Yi Jia and Zhi Zhou and Lan-Zhe Guo and Yu-Feng Li},
+    title        = {TabFSBench: Tabular Benchmark for Feature Shifts in Open Environment},
+    booktitle    = {arXiv preprint arXiv:2501.18935},
+    year         = {2025}
+}</code></pre></div>
+    </div>
+  </section>
+
+</body>
