@@ -6,6 +6,8 @@ permalink: /about/
 
 ## Introduction
 
+---
+
 **TabFSBench** is a benchmarking tool for feature shifts in tabular data in open-environment scenarios. It aims to analyse the performance and robustness of a model in feature shifts.
 
 **TabFSBench** offers the following advantages:
@@ -15,7 +17,7 @@ permalink: /about/
 - **Exportable Datasets**: Be able to export the feature-shift version of the given dataset.
 - **Addable Components**: Supports to add new datasets and models, and export the given dataset under the specific experiment.
 
-## Datasets
+<h2 style="color:#45479e"> Datasets </h2>
 
 <head>
     <meta charset="UTF-8">
