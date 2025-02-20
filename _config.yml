@@ -13,6 +13,7 @@ plugins:
 #   date_format_short: "%b %-d"
 
 header_pages:
+- index.html
 - about.md
 - posts.md
 - github.md
