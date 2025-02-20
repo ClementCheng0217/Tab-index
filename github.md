@@ -79,6 +79,18 @@ permalink: /board/
 <tr><td>CAP</td><td>-0.02</td><td>-0.051</td><td>-0.09</td><td>-0.157</td><td>-0.263</td><td>-0.012</td><td>-0.044</td><td>-0.084</td><td>-0.13</td><td>-0.232</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td></tr>
 <tr><td>NET</td><td>-0.015</td><td>-0.055</td><td>-0.099</td><td>-0.161</td><td>-0.21</td><td>-0.025</td><td>-0.07</td><td>-0.108</td><td>-0.165</td><td>-0.27</td><td>0.004</td><td>0.018</td><td>0.14</td><td>0.027</td><td>0.029</td></tr>
 <tr><td>GOS</td><td>-0.026</td><td>-0.069</td><td>-0.121</td><td>-0.203</td><td>-0.286</td><td>-0.03</td><td>-0.082</td><td>-0.15</td><td>-0.236</td><td>-0.423</td><td>0.001</td><td>0.003</td><td>0.005</td><td>0.006</td><td>0.013</td></tr>
+      <tr><td>INT</td><td>-0.028</td><td>-0.065</td><td>-0.115</td><td>-0.188</td><td>-0.269</td><td>-0.015</td><td>-0.071</td><td>-0.145</td><td>-0.262</td><td>-0.383</td><td>0.012</td><td>0.034</td><td>0.063</td><td>0.095</td><td>0.163</td></tr>
+<tr><td>DCN</td><td>-0.026</td><td>-0.07</td><td>-0.12</td><td>-0.201</td><td>-0.285</td><td>-0.025</td><td>-0.067</td><td>-0.135</td><td>-0.216</td><td>-0.362</td><td>0.039</td><td>0.102</td><td>0.18</td><td>0.244</td><td>0.317</td></tr>
+<tr><td>FTT</td><td>-0.028</td><td>-0.077</td><td>-0.138</td><td>-0.232</td><td>-0.305</td><td>-0.017</td><td>-0.067</td><td>-0.145</td><td>-0.272</td><td>-0.464</td><td>0.007</td><td>0.025</td><td>0.049</td><td>0.078</td><td>0.112</td></tr>
+<tr><td>GRO</td><td>-0.01</td><td>-0.041</td><td>-0.077</td><td>-0.138</td><td>-0.198</td><td>-0.008</td><td>-0.026</td><td>-0.045</td><td>-0.077</td><td>-0.105</td><td>0.003</td><td>0.005</td><td>0.009</td><td>0.016</td><td>0.018</td></tr>
+<tr><td>SAT</td><td>-0.016</td><td>-0.042</td><td>-0.072</td><td>-0.142</td><td>-0.247</td><td>-0.031</td><td>-0.095</td><td>-0.192</td><td>-0.32</td><td>-0.44</td><td>0.017</td><td>0.051</td><td>0.087</td><td>0.131</td><td>0.167</td></tr>
+<tr><td>SNN</td><td>-0.018</td><td>-0.048</td><td>-0.086</td><td>-0.143</td><td>-0.226</td><td>-0.017</td><td>-0.055</td><td>-0.102</td><td>-0.164</td><td>-0.275</td><td>0.013</td><td>0.038</td><td>0.05</td><td>0.066</td><td>0.059</td></tr>
+<tr><td>TTF</td><td>-0.016</td><td>-0.044</td><td>-0.078</td><td>-0.133</td><td>-0.203</td><td>-0.009</td><td>-0.032</td><td>-0.056</td><td>-0.086</td><td>-0.15</td><td>0.001</td><td>0.002</td><td>0.002</td><td>0.003</td><td>0.006</td></tr>
+<tr><td>TABR</td><td>-0.062</td><td>-0.158</td><td>-0.214</td><td>-0.263</td><td>-0.318</td><td>-0.046</td><td>-0.126</td><td>-0.221</td><td>-0.355</td><td>-0.525</td><td>0.022</td><td>0.064</td><td>0.119</td><td>0.244</td><td>0.392</td></tr>
+<tr><td>NCA</td><td>-0.161</td><td>-0.271</td><td>-0.301</td><td>-0.329</td><td>-0.357</td><td>-0.087</td><td>-0.206</td><td>-0.344</td><td>-0.462</td><td>-0.62</td><td>0.163</td><td>0.369</td><td>0.559</td><td>0.795</td><td>1</td></tr>
+<tr><td>LMA</td><td>-0.045</td><td>-0.118</td><td>-0.176</td><td>-0.244</td><td>-0.351</td><td>0.056</td><td>-0.101</td><td>-0.217</td><td>-0.291</td><td>-0.429</td><td>-0.233</td><td>0.444</td><td>0.595</td><td>0.359</td><td>0.669</td></tr>
+<tr><td>TLLM</td><td>-0.022</td><td>-0.042</td><td>-0.056</td><td>-0.066</td><td>-0.08</td><td>-0.007</td><td>-0.017</td><td>-0.103</td><td>-0.314</td><td>-0.245</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td></tr>
+<tr><td>UNI</td><td>-0.019</td><td>-0.038</td><td>-0.058</td><td>-0.074</td><td>-0.094</td><td>-0.135</td><td>-0.137</td><td>-0.123</td><td>-0.139</td><td>-0.176</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td></tr>
     </tbody>
 </table>
 
