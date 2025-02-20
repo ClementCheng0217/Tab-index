@@ -3,12 +3,11 @@ layout: page
 title: Leaderboard
 permalink: /board/
 ---
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sortable Table</title>
     <style>
         table {
             width: 100%;
@@ -16,7 +15,7 @@ permalink: /board/
         }
         th, td {
             padding: 8px;
-            text-align: left;
+            text-align: center;
             border-bottom: 1px solid #ddd;
         }
         th {
@@ -35,7 +34,7 @@ permalink: /board/
 </head>
 <body>
 
-<h2>Sortable Table</h2>
+<h2>Performance Gap</h2>
 
 <table id="sortableTable">
     <thead>
@@ -91,6 +90,69 @@ permalink: /board/
 <tr><td>LMA</td><td>-0.045</td><td>-0.118</td><td>-0.176</td><td>-0.244</td><td>-0.351</td><td>0.056</td><td>-0.101</td><td>-0.217</td><td>-0.291</td><td>-0.429</td><td>-0.233</td><td>0.444</td><td>0.595</td><td>0.359</td><td>0.669</td></tr>
 <tr><td>TLLM</td><td>-0.022</td><td>-0.042</td><td>-0.056</td><td>-0.066</td><td>-0.08</td><td>-0.007</td><td>-0.017</td><td>-0.103</td><td>-0.314</td><td>-0.245</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td></tr>
 <tr><td>UNI</td><td>-0.019</td><td>-0.038</td><td>-0.058</td><td>-0.074</td><td>-0.094</td><td>-0.135</td><td>-0.137</td><td>-0.123</td><td>-0.139</td><td>-0.176</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td></tr>
+    </tbody>
+</table>
+<br>
+
+<h2>Performance Rank</h2>
+
+<table id="sortableTable" style="text-align: center;">
+    <thead>
+        <!-- 新增合并行 -->
+        <tr>
+          <th colspan="1" class="group-header">Rank</th>
+            <th colspan="6" class="group-header">Binary Classification</th>
+          <th colspan="6" class="group-header">Multi Classification</th>
+          <th colspan="6" class="group-header">Regression</th>
+        </tr>
+        <!-- 原有表头行 -->
+        <tr>
+            <th onclick="sortTable(0)">Model</th>
+          <th onclick="sortTable(1)">0%</th>
+            <th onclick="sortTable(2)">20%</th>
+            <th onclick="sortTable(3)">40%</th>
+          <th onclick="sortTable(4)">60%</th>
+            <th onclick="sortTable(5)">80%</th>
+            <th onclick="sortTable(6)">100%</th>
+          <th onclick="sortTable(7)">0%</th>
+                      <th onclick="sortTable(8)">20%</th>
+            <th onclick="sortTable(9)">40%</th>
+          <th onclick="sortTable(10)">60%</th>
+            <th onclick="sortTable(11)">80%</th>
+            <th onclick="sortTable(12)">100%</th>
+          <th onclick="sortTable(13)">0%</th>
+                      <th onclick="sortTable(14)">20%</th>
+            <th onclick="sortTable(15)">40%</th>
+          <th onclick="sortTable(16)">60%</th>
+            <th onclick="sortTable(17)">80%</th>
+            <th onclick="sortTable(18)">100%</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>LGB</td><td>5</td><td>10</td><td>21</td><td>22</td><td>22</td><td>23</td><td>6</td><td>10</td><td>15</td><td>20</td><td>24</td><td>24</td><td>2</td><td>3</td><td>3</td><td>3</td><td>8</td><td>15</td></tr>
+<tr><td>XGB</td><td>3</td><td>13</td><td>23</td><td>23</td><td>24</td><td>24</td><td>5</td><td>8</td><td>13</td><td>15</td><td>19</td><td>18</td><td>3</td><td>4</td><td>4</td><td>6</td><td>20</td><td>19</td></tr>
+<tr><td>CATB</td><td>2</td><td>1</td><td>4</td><td>5</td><td>5</td><td>8</td><td>2</td><td>4</td><td>3</td><td>6</td><td>17</td><td>17</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>6</td></tr>
+<tr><td>PFN</td><td>7</td><td>5</td><td>13</td><td>12</td><td>12</td><td>9</td><td>7</td><td>16</td><td>14</td><td>10</td><td>9</td><td>11</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td></tr>
+<tr><td>DAN</td><td>19</td><td>18</td><td>15</td><td>10</td><td>7</td><td>5</td><td>20</td><td>20</td><td>20</td><td>17</td><td>15</td><td>13</td><td>18</td><td>18</td><td>17</td><td>19</td><td>17</td><td>11</td></tr>
+<tr><td>MLP</td><td>13</td><td>9</td><td>7</td><td>6</td><td>8</td><td>6</td><td>15</td><td>14</td><td>11</td><td>7</td><td>7</td><td>9</td><td>9</td><td>10</td><td>10</td><td>10</td><td>5</td><td>3</td></tr>
+<tr><td>NODE</td><td>22</td><td>23</td><td>20</td><td>16</td><td>14</td><td>7</td><td>22</td><td>23</td><td>23</td><td>22</td><td>12</td><td>5</td><td>17</td><td>16</td><td>16</td><td>17</td><td>14</td><td>10</td></tr>
+<tr><td>RES</td><td>11</td><td>8</td><td>9</td><td>14</td><td>16</td><td>18</td><td>8</td><td>7</td><td>9</td><td>8</td><td>10</td><td>19</td><td>6</td><td>8</td><td>7</td><td>8</td><td>4</td><td>2</td></tr>
+<tr><td>SWI</td><td>14</td><td>12</td><td>5</td><td>4</td><td>4</td><td>4</td><td>12</td><td>13</td><td>5</td><td>3</td><td>2</td><td>6</td><td>20</td><td>19</td><td>20</td><td>20</td><td>19</td><td>14</td></tr>
+<tr><td>CAP</td><td>17</td><td>17</td><td>11</td><td>8</td><td>6</td><td>11</td><td>18</td><td>19</td><td>17</td><td>14</td><td>6</td><td>3</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td></tr>
+<tr><td>NET</td><td>21</td><td>19</td><td>17</td><td>19</td><td>21</td><td>17</td><td>19</td><td>21</td><td>21</td><td>18</td><td>13</td><td>10</td><td>16</td><td>20</td><td>19</td><td>15</td><td>12</td><td>8</td></tr>
+<tr><td>GOS</td><td>10</td><td>6</td><td>6</td><td>7</td><td>9</td><td>10</td><td>14</td><td>11</td><td>10</td><td>5</td><td>8</td><td>14</td><td>5</td><td>7</td><td>6</td><td>7</td><td>3</td><td>1</td></tr>
+<tr><td>INT</td><td>18</td><td>16</td><td>10</td><td>11</td><td>10</td><td>13</td><td>21</td><td>18</td><td>19</td><td>19</td><td>21</td><td>20</td><td>12</td><td>11</td><td>11</td><td>11</td><td>11</td><td>18</td></tr>
+<tr><td>DCN</td><td>12</td><td>11</td><td>8</td><td>9</td><td>11</td><td>12</td><td>10</td><td>12</td><td>6</td><td>4</td><td>3</td><td>8</td><td>8</td><td>9</td><td>8</td><td>9</td><td>7</td><td>4</td></tr>
+<tr><td>FTT</td><td>16</td><td>15</td><td>14</td><td>15</td><td>18</td><td>19</td><td>16</td><td>15</td><td>12</td><td>13</td><td>14</td><td>22</td><td>13</td><td>13</td><td>12</td><td>12</td><td>10</td><td>7</td></tr>
+<tr><td>GRO</td><td>23</td><td>20</td><td>19</td><td>18</td><td>17</td><td>14</td><td>24</td><td>24</td><td>24</td><td>24</td><td>23</td><td>12</td><td>15</td><td>15</td><td>15</td><td>16</td><td>15</td><td>12</td></tr>
+<tr><td>SAT</td><td>8</td><td>2</td><td>1</td><td>2</td><td>3</td><td>3</td><td>13</td><td>6</td><td>7</td><td>11</td><td>16</td><td>15</td><td>10</td><td>12</td><td>13</td><td>13</td><td>13</td><td>17</td></tr>
+<tr><td>SNN</td><td>20</td><td>21</td><td>18</td><td>17</td><td>15</td><td>16</td><td>17</td><td>17</td><td>16</td><td>9</td><td>5</td><td>4</td><td>14</td><td>14</td><td>14</td><td>14</td><td>16</td><td>9</td></tr>
+<tr><td>TTF</td><td>24</td><td>24</td><td>22</td><td>20</td><td>20</td><td>22</td><td>23</td><td>22</td><td>22</td><td>21</td><td>11</td><td>7</td><td>19</td><td>17</td><td>18</td><td>18</td><td>18</td><td>13</td></tr>
+<tr><td>TABR</td><td>4</td><td>14</td><td>16</td><td>21</td><td>19</td><td>15</td><td>9</td><td>5</td><td>8</td><td>12</td><td>18</td><td>21</td><td>7</td><td>6</td><td>5</td><td>5</td><td>1</td><td>5</td></tr>
+<tr><td>NCA</td><td>1</td><td>22</td><td>24</td><td>24</td><td>23</td><td>21</td><td>1</td><td>1</td><td>4</td><td>16</td><td>22</td><td>23</td><td>4</td><td>5</td><td>2</td><td>2</td><td>6</td><td>16</td></tr>
+<tr><td>LMA</td><td>6</td><td>4</td><td>12</td><td>13</td><td>13</td><td>20</td><td>11</td><td>9</td><td>18</td><td>23</td><td>20</td><td>16</td><td>11</td><td>2</td><td>9</td><td>4</td><td>9</td><td>20</td></tr>
+<tr><td>TLLM</td><td>9</td><td>7</td><td>3</td><td>3</td><td>1</td><td>1</td><td>3</td><td>3</td><td>2</td><td>2</td><td>4</td><td>2</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td></tr>
+<tr><td>UNI</td><td>15</td><td>3</td><td>2</td><td>1</td><td>2</td><td>2</td><td>4</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td><td>\\</td></tr>
     </tbody>
 </table>
 
