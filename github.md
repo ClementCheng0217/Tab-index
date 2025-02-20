@@ -26,6 +26,11 @@ permalink: /board/
         th:hover {
             background-color: #ddd;
         }
+        /* 新增合并单元格的样式 */
+        .group-header {
+            text-align: center;
+            background-color: #e0e0e0;
+        }
     </style>
 </head>
 <body>
@@ -34,6 +39,11 @@ permalink: /board/
 
 <table id="sortableTable">
     <thead>
+        <!-- 新增合并行 -->
+        <tr>
+            <th colspan="3" class="group-header">People</th>
+        </tr>
+        <!-- 原有表头行 -->
         <tr>
             <th onclick="sortTable(0)">Name</th>
             <th onclick="sortTable(1)">Age</th>
@@ -68,6 +78,10 @@ permalink: /board/
 function sortTable(n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("sortableTable");
+    table = document.getElementById("sortableTable");
+    if (table.rows.length > 0) {  // 确保表格至少有一行
+        table.deleteRow(0);       // 删除第一行
+    }
     switching = true;
     dir = "asc"; 
     while (switching) {
