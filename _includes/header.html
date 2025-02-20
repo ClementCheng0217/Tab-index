@@ -1,11 +1,4 @@
 <header id="nav-header" class="border-dark border-left-0 border-right-0">
-  <script>
-    .active {
-    font-weight: bold; /* 加粗文本 */
-    background-color: green; /* 背景颜色为黑色 */
-    color: red; /* 文本颜色为白色 */
-}
-  </script>
   <div id="nav-container" class="container position-relative d-flex justify-content-between align-items-center">
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
@@ -21,7 +14,7 @@
           {% for path in page_paths %}
             {% assign my_page = site.pages | where: "path", path | first %}
             {% if my_page.title %}
-              <a class="{% if my_page.url == page.url %}active{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              <a class="{text-dark ml-3 ml-md-0 p-2 d-block d-md-inline-block % if my_page.url == page.url %}background-color green color red{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {% endif %}
           {% endfor %}
         </div>
