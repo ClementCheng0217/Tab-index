@@ -4,6 +4,9 @@ title: Leaderboard
 permalink: /board/
 ---
 
+**🌟 The leaderboard allows sorting via single-click on column headers.**
+<br>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
