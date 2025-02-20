@@ -3,16 +3,37 @@ layout: page
 title: Leaderboard
 permalink: /board/
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            cursor: pointer;
+            background-color: #f2f2f2;
+        }
+        th:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
 
-# 可排序表格示例
-
-以下是一个支持列名排序的表格：
+<h2>Sortable Table</h2>
 
 <table id="sortableTable">
     <thead>
-        <tr>
-            <th colspan="3">Information</th>
-        </tr>
         <tr>
             <th onclick="sortTable(0)">Name</th>
             <th onclick="sortTable(1)">Age</th>
@@ -44,32 +65,43 @@ permalink: /board/
 </table>
 
 <script>
-    function sortTable(columnIndex) {
-        const table = document.getElementById("sortableTable");
-        const tbody = table.querySelector("tbody");
-        const rows = Array.from(tbody.querySelectorAll("tr"));
-
-        // 判断当前排序方向
-        const isAscending = table.getAttribute(`data-sort-direction-${columnIndex}`) === "asc";
-        const newDirection = isAscending ? "desc" : "asc";
-        table.setAttribute(`data-sort-direction-${columnIndex}`, newDirection);
-
-        // 排序逻辑
-        rows.sort((rowA, rowB) => {
-            const cellA = rowA.querySelectorAll("td")[columnIndex].textContent.trim();
-            const cellB = rowB.querySelectorAll("td")[columnIndex].textContent.trim();
-
-            if (!isNaN(cellA) && !isNaN(cellB)) {
-                // 如果是数字，按数字排序
-                return isAscending ? cellA - cellB : cellB - cellA;
-            } else {
-                // 如果是文本，按字母排序
-                return isAscending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("sortableTable");
+    switching = true;
+    dir = "asc"; 
+    while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 1; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            if (dir == "asc") {
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            } else if (dir == "desc") {
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
             }
-        });
-
-        // 清空并重新插入排序后的行
-        tbody.innerHTML = "";
-        rows.forEach(row => tbody.appendChild(row));
+        }
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            switchcount ++; 
+        } else {
+            if (switchcount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
+        }
     }
+}
 </script>
+
+</body>
+</html>
