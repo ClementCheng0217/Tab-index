@@ -36,7 +36,7 @@ permalink: /board/
 
 <h2>Closed-Environment Rank v.s. Feature-Shift Rank</h2>
 
-<table id="sortableTable">
+<table id="sortableTable2">
     <thead>
         <tr>
             <th onclick="sortTable2(0)">Model</th>
@@ -75,7 +75,7 @@ permalink: /board/
 
 <h2>Feature-Shift Performance Gap</h2>
 
-<table id="sortableTable">
+<table id="sortableTable1">
     <thead>
         <!-- 新增合并行 -->
         <tr>
@@ -86,22 +86,22 @@ permalink: /board/
         </tr>
         <!-- 原有表头行 -->
         <tr>
-            <th onclick="sortTable(0)">Model</th>
-            <th onclick="sortTable(1)">20%</th>
-            <th onclick="sortTable(2)">40%</th>
-          <th onclick="sortTable(3)">60%</th>
-            <th onclick="sortTable(4)">80%</th>
-            <th onclick="sortTable(5)">100%</th>
-                      <th onclick="sortTable(6)">20%</th>
-            <th onclick="sortTable(7)">40%</th>
-          <th onclick="sortTable(8)">60%</th>
-            <th onclick="sortTable(9)">80%</th>
-            <th onclick="sortTable(10)">100%</th>
-                      <th onclick="sortTable(11)">20%</th>
-            <th onclick="sortTable(12)">40%</th>
-          <th onclick="sortTable(13)">60%</th>
-            <th onclick="sortTable(14)">80%</th>
-            <th onclick="sortTable(15)">100%</th>
+            <th onclick="sortTable1(0)">Model</th>
+            <th onclick="sortTable1(1)">20%</th>
+            <th onclick="sortTable1(2)">40%</th>
+          <th onclick="sortTable1(3)">60%</th>
+            <th onclick="sortTable1(4)">80%</th>
+            <th onclick="sortTable1(5)">100%</th>
+                      <th onclick="sortTable1(6)">20%</th>
+            <th onclick="sortTable1(7)">40%</th>
+          <th onclick="sortTable1(8)">60%</th>
+            <th onclick="sortTable1(9)">80%</th>
+            <th onclick="sortTable1(10)">100%</th>
+                      <th onclick="sortTable1(11)">20%</th>
+            <th onclick="sortTable1(12)">40%</th>
+          <th onclick="sortTable1(13)">60%</th>
+            <th onclick="sortTable1(14)">80%</th>
+            <th onclick="sortTable1(15)">100%</th>
         </tr>
     </thead>
     <tbody>
@@ -196,9 +196,9 @@ permalink: /board/
 </table>
 
 <script>
-    function sortTable2(n) {
+function sortTable2(n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-    table = document.getElementById("sortableTable");
+    table = document.getElementById("sortableTable2");
     switching = true;
     dir = "asc"; 
     while (switching) {
@@ -232,6 +232,44 @@ permalink: /board/
         }
     }
 }
+    
+function sortTable1(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("sortableTable1");
+    switching = true;
+    dir = "asc"; 
+    while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 2; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            if (dir == "asc") {
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            } else if (dir == "desc") {
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+        }
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            switchcount ++; 
+        } else {
+            if (switchcount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
+        }
+    }
+}
+    
 function sortTable(n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("sortableTable");
