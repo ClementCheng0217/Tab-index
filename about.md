@@ -165,6 +165,8 @@ permalink: /about/
     </tbody>
 </table>
 
+
+
 ## Models
 
 ---
@@ -206,6 +208,8 @@ We use LAMDA-TALENT to evaluate deep-learning models. You can get details from *
 1. **[TabLLM](https://arxiv.org/abs/2210.10723)**: A framework that leverages LLMs for efficient tabular data classification.
 2. **[UniPredict](https://arxiv.org/abs/2310.03266)**: A framework that firstly trains on multiple datasets to acquire a rich repository of prior knowledge. UniPredict-Light model that TabFSBench used is available at [Google Drive](https://drive.google.com/file/d/1ABsv0C9HSJ9-M3kpkGRIFEw-4ebKdA3h/view?usp=sharing). After downloading the model, place it in `./model/tabularLLM/files/unified/models` and rename it to `light_state.pt`.
 
+
+
 ## Experimental Results
 
 ---
@@ -223,10 +227,10 @@ We use LAMDA-TALENT to evaluate deep-learning models. You can get details from *
 
 We use performance gap to measure the model performance Gap $Delta$. Sum of shifted feature set's correlations refers to the sum of Pearson correlation coefficients of shifted features. Notably, model performance Gap $Delta$ and sum of shifted feature set's correlations demonstrate a strong correlation, with a Pearson correlation coefficient of $\rho$ = 0.7405.
 
-<img src="https://s2.loli.net/2025/01/31/7Hi8fX61DbTeq5L.png"  width="800px">
+<img src="https://s2.loli.net/2025/01/31/7Hi8fX61DbTeq5L.png"  width="600px">
 
 #### 3. Model closed-environment performance correlates with feature-shift performance.
 
 Model closed-environment performance vs. model feature-shift performance. Closed-environment means that the dataset does not have any degree of feature shift. Feature-shift means average model performance in all degrees of feature shifts.
 
-<img src="https://s2.loli.net/2025/01/31/SId5jgqNUvJxKzk.png"  width="800px">
+<img src="https://s2.loli.net/2025/01/31/SId5jgqNUvJxKzk.png"  width="600px">
