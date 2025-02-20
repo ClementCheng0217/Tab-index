@@ -4,7 +4,8 @@ title: Leaderboard
 permalink: /board/
 ---
 
-**🌟 The leaderboard allows sorting via single-click on column headers.**
+
+<h3>🌟 All leaderboards allow sorting via single-click on column headers.</h3>
 <br>
 
 <html lang="en">
@@ -37,7 +38,7 @@ permalink: /board/
 </head>
 <body>
 
-<h2>Closed-Environment Rank v.s. Feature-Shift Rank</h2>
+<h3>Closed-Environment Rank v.s. Feature-Shift Rank</h3>
 
 <table id="sortableTable2">
     <thead>
@@ -76,7 +77,7 @@ permalink: /board/
 </table>
 <br>
 
-<h2>Feature-Shift Performance Gap</h2>
+<h3>Feature-Shift Performance Gap</h3>
 
 <table id="sortableTable1">
     <thead>
@@ -136,7 +137,7 @@ permalink: /board/
 </table>
 <br>
 
-<h2>Feature-Shift Performance Rank</h2>
+<h3>Feature-Shift Performance Rank</h3>
 
 <table id="sortableTable" style="text-align: center;">
     <thead>
