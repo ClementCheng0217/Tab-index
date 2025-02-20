@@ -78,16 +78,12 @@ permalink: /board/
 function sortTable(n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("sortableTable");
-    table = document.getElementById("sortableTable");
-    if (table.rows.length > 0) {  // 确保表格至少有一行
-        table.deleteRow(0);       // 删除第一行
-    }
     switching = true;
     dir = "asc"; 
     while (switching) {
         switching = false;
         rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
+        for (i = 2; i < (rows.length - 1); i++) {
             shouldSwitch = false;
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
